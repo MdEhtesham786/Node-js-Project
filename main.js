@@ -115,7 +115,7 @@ app.post("/register", async (req, res) => {
     }
   } catch (err) {
     const message = err.errors
-    if (message.name?.message === 'Name cannot more than 20 characters') {
+    if (message?.name?.message === 'Name cannot more than 20 characters') {
       return res.status(200).render('register', { result: message.name.message })
     } else if (message.email?.message === 'email cannot more than 40 characters') {
       return res.status(200).render('register', { result: message.email.message })
@@ -178,7 +178,7 @@ app.post('/change', async (req, res) => {
     res.redirect('/change')
   }
 })
-//Insert json data
+
 
 app.listen(port, () => {
   console.log(`This server is listening on port http://${hostname}:${port}`);
