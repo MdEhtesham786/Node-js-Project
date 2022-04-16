@@ -50,7 +50,7 @@ const Register = mongoose.model("Register", clientSchema);
 //Setting Static and Views files
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/public/Views"));
-app.use('/', gitexpress.static("./public"));
+app.use('/', express.static("./public"));
 
 // JSON Data
 app.use(express.json())
