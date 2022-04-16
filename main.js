@@ -10,9 +10,6 @@ const cookieParser = require("cookie-parser");
 const flash = require("connect-flash");
 //Express App
 const app = express();
-
-
-console.log(process.env.MONGODB_URI)
 // SCHEMA
 const clientSchema = new mongoose.Schema({
   name: {
@@ -31,7 +28,6 @@ const clientSchema = new mongoose.Schema({
     required: true,
   },
 });
-console.log('Schema')
 //Hashing
 clientSchema.pre("save", async function (next) {
   if (this.isModified("password")) {
@@ -39,7 +35,6 @@ clientSchema.pre("save", async function (next) {
     next();
   }
 });
-console.log('hashing')
 //Model
 const Register = mongoose.model("Register", clientSchema);
 
@@ -47,11 +42,9 @@ const Register = mongoose.model("Register", clientSchema);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/public/Views"));
 app.use('/', express.static("./public"));
-console.log('Model')
 // JSON Data
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-console.log('Json')
 //Cookie Parser,Sessions and Flash
 app.use(cookieParser("SecretCookieString"));
 app.use(
@@ -63,13 +56,11 @@ app.use(
   })
 );
 app.use(flash());
-console.log('Middleware')
 
 //Server
 //Get
 app.get("/", (req, res) => {
   res.status(200).render("login", { result: "" });
-  console.log(process.env.MONGODB_URI)
 
 });
 app.get("/register", (req, res) => {
@@ -82,7 +73,6 @@ app.get("/home", (req, res) => {
 app.get('/change', (req, res) => {
   res.render('change', { result: 'Result' })
 });
-console.log('Get')
 //Post
 app.post("/register", async (req, res) => {
   try {
@@ -178,7 +168,6 @@ app.post('/change', async (req, res) => {
   }
 })
 
-console.log('Post')
 
 const start = async () => {
   try {
@@ -188,8 +177,6 @@ const start = async () => {
       console.log(`This server is listening on port http://${hostname}:${port}`);
     });
   } catch (err) {
-    console.log(err)
   }
 }
 start()
-console.log('Listen')
