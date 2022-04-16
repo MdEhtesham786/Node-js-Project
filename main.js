@@ -117,10 +117,10 @@ app.post("/register", async (req, res) => {
     const message = err.errors
     if (message?.name?.message === 'Name cannot more than 20 characters') {
       return res.status(200).render('register', { result: message.name.message })
-    } else if (message.email?.message === 'email cannot more than 40 characters') {
+    } else if (message?.email?.message === 'email cannot more than 40 characters') {
       return res.status(200).render('register', { result: message.email.message })
     } else {
-      return res.send('Cannot Register go back')
+      return res.send('Cannot Register go back maybe database not found')
     }
   }
 });
