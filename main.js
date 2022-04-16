@@ -12,11 +12,12 @@ const flash = require("connect-flash");
 const app = express();
 
 //Mongoose setup
-main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(process.env.MONGO_URI);
 }
+main().catch((err) => console.log(err));
 
+console.log(process.env.MONGO_URI)
 // SCHEMA
 const clientSchema = new mongoose.Schema({
   name: {
@@ -72,6 +73,8 @@ app.use(flash());
 //Get
 app.get("/", (req, res) => {
   res.status(200).render("login", { result: "" });
+  console.log(process.env.MONGO_URI)
+
 });
 app.get("/register", (req, res) => {
   res.status(200).render("register", { result: "" });
