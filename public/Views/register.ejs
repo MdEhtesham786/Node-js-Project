@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Travelling Website</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+
+    <div class="mainform">
+        <div class="navbar">
+            <div class="icon">
+                <!-- <h2 class="logo">Register</h2> -->
+            </div>
+        </div>
+        <div class="content">
+
+            <div class="form">
+                <h2>Sign up Here</h2>
+                <p class="result">
+                    <%= result %>
+                </p>
+                <form action="/register" method="POST">
+                    <div class="all_inputs">
+                        <input type="text" name="name" id="name" placeholder="Enter Name Here" required>
+                        <input type="email" name="email" id="email" placeholder="Enter Email Here" required>
+                        <input type="password" name="password" id="password" placeholder="Enter Password Here" required>
+                        <input type="password" name="confirm_password" id="confirm_password"
+                            placeholder="Re-enter Password" required>
+                    </div>
+                    <button type="submit" class="btnn">Sign up</button>
+                </form>
+                <p class="link">Already have an account<br><a href="/">Login </a> here </p>
+                <div class="icons">
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-skype"></ion-icon>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Travelling Website</title>
+    <link rel="stylesheet" href="css/change.css">
+</head>
+
+<body>
+
+    <div class="mainform">
+        <div class="navbar">
+            <div class="icon">
+                <!-- <h2 class="logo">Change password</h2> -->
+            </div>
+        </div>
+        <div class="content">
+            <div class="form">
+                <h2>Change Password</h2>
+                <p class="result">
+                    <% if(result=='Email not found' || result=='Incorrect old password' ||
+                        result=='New Password and Confirm Password must be same' ){ %>
+                        <%= result %>
+                            <% } %>
+                </p>
+                <form action="change" method="POST">
+
+                    <input type="email" name="email" id="email" placeholder="Enter Email Here" required>
+                    <input type="password" name="old_password" id="old_password" placeholder="Enter Old Password"
+                        required>
+                    <input type="password" name="new_password" id="new_password" placeholder="Enter New Password"
+                        required>
+                    <input type="password" name="confirm_password" id="confirm_password"
+                        placeholder="Confirm New Password" required>
+
+                    <button type="submit" class="btnn">Enter</button>
+                </form>
+                <p class="link">Go to <a href="/">Login </a> page </p>
+                <!-- <p class="changepassword"> <a href="changepassword">Change password?</a> </p> -->
+                <div class="icons">
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-skype"></ion-icon>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>
