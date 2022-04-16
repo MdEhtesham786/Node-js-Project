@@ -11,13 +11,8 @@ const flash = require("connect-flash");
 //Express App
 const app = express();
 
-//Mongoose setup
-async function main() {
-  await mongoose.connect(process.env.MONGO_URI);
-}
-main().catch((err) => console.log(err));
 
-console.log(process.env.MONGO_URI)
+console.log(process.env.MONGODB_URI)
 // SCHEMA
 const clientSchema = new mongoose.Schema({
   name: {
@@ -74,7 +69,7 @@ console.log('Middleware')
 //Get
 app.get("/", (req, res) => {
   res.status(200).render("login", { result: "" });
-  console.log(process.env.MONGO_URI)
+  console.log(process.env.MONGODB_URI)
 
 });
 app.get("/register", (req, res) => {
@@ -184,7 +179,17 @@ app.post('/change', async (req, res) => {
 })
 
 console.log('Post')
-app.listen(port, () => {
-  console.log(`This server is listening on port http://${hostname}:${port}`);
-});
+
+const start = async () => {
+  try {
+    //Mongoose setup
+    await mongoose.connect(process.env.MONGODB_URI)
+    app.listen(port, () => {
+      console.log(`This server is listening on port http://${hostname}:${port}`);
+    });
+  } catch (err) {
+    console.log(err)
+  }
+}
+start()
 console.log('Listen')

@@ -23,7 +23,7 @@
     height: 3px;
     width: 0vw;
 
-    animation: bar 3s linear  1 normal;
+    animation: bar 3s linear 1 normal;
 }
 
 
@@ -83,23 +83,25 @@ nav ul li a:hover {
     font-weight: 900;
     font-size: 1.2em;
 }
+
 .search button:hover {
-background-color: rgb(34, 34, 165);
+    background-color: rgb(34, 34, 165);
 }
-.dynamic{
+
+.dynamic {
     position: absolute;
     left: 60%;
     font-size: 2em;
     color: white;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-.logout{
+
+.logout {
     position: relative;
-    left:65%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    left: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 120px;
     height: 35px;
     border: white 2px solid;
@@ -109,6 +111,7 @@ background-color: rgb(34, 34, 165);
     color: white;
     text-decoration: none;
 }
+
 .logout:hover {
     background-color: white;
     border-color: blue;
@@ -116,12 +119,12 @@ background-color: rgb(34, 34, 165);
 
 }
 
-.register{
+.register {
     position: relative;
-    left:70%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    left: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 120px;
     height: 35px;
     border: white 2px solid;
@@ -131,6 +134,7 @@ background-color: rgb(34, 34, 165);
     color: white;
     text-decoration: none;
 }
+
 .register:hover {
     background-color: white;
     border-color: blue;
@@ -194,10 +198,12 @@ footer {
     flex-direction: column;
     margin: 0 15px;
 }
-.lines{
+
+.lines {
     font-size: 1.2em;
     font-weight: bold;
 }
+
 .card h2 {
     font-family: 'Lato', sans-serif;
 }
@@ -216,41 +222,44 @@ footer {
 }
 
 /* SLIDER */
-@keyframes run  {
+@keyframes run {
     0% {
-transform: translateX(0px);
+        transform: translateX(0px);
     }
-20%{
-    transform: translateX(-1100px);
 
-}
-40%{
-    transform: translateX(-2200px);
+    20% {
+        transform: translateX(-1100px);
 
-}
-60%{
-    transform: translateX(-3300px);
-
-}
-80%{
-    transform: translateX(-4400px);
-
-}
-    100%{
-transform: translateX(-5500px);
     }
-    
+
+    40% {
+        transform: translateX(-2200px);
+
+    }
+
+    60% {
+        transform: translateX(-3300px);
+
+    }
+
+    80% {
+        transform: translateX(-4400px);
+
+    }
+
+    100% {
+        transform: translateX(-5500px);
+    }
+
 }
-body{
+
+body {
     overflow-x: hidden;
 }
 
-.animation{
-    animation: run 20s ease-in-out none infinite normal ;
+.animation {
+    animation: run 20s ease-in-out none infinite normal;
 }
-
-
-
 
 * {
     margin: 0px;
