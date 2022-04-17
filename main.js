@@ -14,12 +14,10 @@ const app = express();
 const clientSchema = new mongoose.Schema({
   name: {
     type: String,
-    maxlength: [20, 'Name cannot more than 20 characters'],
     required: true,
   },
   email: {
     type: String,
-    maxlength: [40, 'email cannot more than 40 characters'],
     required: true,
     unique: true,
   },
@@ -104,12 +102,12 @@ app.post("/register", async (req, res) => {
     }
   } catch (err) {
     const message = err.errors
-    if (message?.name?.message === 'Name cannot more than 20 characters') {
+    if (message.name?.message === 'Name cannot more than 20 characters') {
       return res.status(200).render('register', { result: message.name.message })
-    } else if (message?.email?.message === 'email cannot more than 40 characters') {
+    } else if (message.email?.message === 'email cannot more than 40 characters') {
       return res.status(200).render('register', { result: message.email.message })
     } else {
-      return res.send('Cannot Register go back maybe database not found')
+      return res.send('Cannot Register go back ')
     }
   }
 });
