@@ -65,7 +65,7 @@
 
 }
 
-@media only screen and (max-height:1200px) {
+/* @media only screen and (max-height:900px) {
     .form .link {
         top: 45vw
     }
@@ -78,4 +78,4 @@
         height: 120px;
         transition: none;
     }
-}
+} */
