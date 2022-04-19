@@ -1,0 +1,167 @@
+@media (max-width:1000px) {
+    body {
+        overflow-x: hidden;
+
+    }
+
+    header {
+        position: relative;
+        top: 0;
+        width: fit-content;
+    }
+
+    nav {
+        width: 100rem;
+        height: 55vh;
+        display: flex;
+
+    }
+
+    .search {
+        justify-content: center;
+        width: inherit;
+        align-items: start;
+    }
+
+    .search input {
+        position: absolute;
+        right: 80vw;
+        top: 290px;
+        width: 310vw;
+        height: 16vh;
+        font-size: 4em;
+
+    }
+
+    .search button {
+        font-size: 4em;
+        position: absolute;
+        top: 290px;
+        right: 16vw;
+        height: 16vh;
+        border-width: 8px;
+        border-radius: 20px;
+
+    }
+
+    .logout {
+        left: 0;
+        font-size: 4.5em;
+        width: 230px;
+        height: 87px;
+        margin-top: 11rem;
+        margin-left: 150px;
+        background-color: var(--main-bg-color);
+        color: white;
+        border: none;
+
+    }
+
+    .register {
+        left: 0;
+        font-size: 4.5em;
+        width: 230px;
+        height: 87px;
+        margin-top: 11rem;
+        margin-left: 70px;
+        background-color: var(--main-bg-color);
+        color: white;
+        border: none;
+
+    }
+
+    .dynamic {
+        font-size: 5.7em;
+        width: fit-content;
+        position: absolute;
+        left: 70vw;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        font-size: 4.5em;
+        font-weight: bold;
+
+    }
+
+    nav ul {
+        margin-top: 11rem;
+        margin-left: 20px;
+
+    }
+
+    .prevbtn, .nextbtn {
+        visibility: hidden;
+
+    }
+
+    .main {
+        width: 100rem;
+
+    }
+
+    .cards {
+        overflow: scroll;
+
+    }
+
+    main {
+        width: fit-content;
+
+    }
+
+    .card h2 {
+        width: 60rem;
+        font-size: 4.5em;
+
+    }
+
+    .card-item {
+        margin: 0 6px;
+
+    }
+
+    .card-item img {
+        height: 650px;
+        width: 450px;
+
+    }
+
+    .card {
+        max-width: 400vw;
+        margin: 70px auto;
+    }
+
+    p {
+        font-size: 3em;
+        width: 31rem;
+    }
+
+    .slidercontainer {
+        width: 68%;
+        height: 600px;
+        border-width: 8px;
+    }
+
+    .slider img {
+        height: 600px;
+
+    }
+
+    footer {
+        width: 100rem;
+        height: 12rem;
+
+    }
+
+    footer p {
+        font-size: 3em;
+        width: 45rem;
+    }
+
+
+
+
+
+
+}
