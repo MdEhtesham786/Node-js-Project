@@ -26,9 +26,9 @@
     .search input {
         position: absolute;
         right: 80vw;
-        top: 290px;
+        top: 260px;
         width: 310vw;
-        height: 16vh;
+        height: 18vh;
         font-size: 4em;
 
     }
@@ -36,9 +36,9 @@
     .search button {
         font-size: 4em;
         position: absolute;
-        top: 290px;
+        top: 260px;
         right: 16vw;
-        height: 16vh;
+        height: 18vh;
         border-width: 8px;
         border-radius: 20px;
 
@@ -49,7 +49,7 @@
         font-size: 4.5em;
         width: 230px;
         height: 87px;
-        margin-top: 11rem;
+        margin-top: 9rem;
         margin-left: 150px;
         background-color: var(--main-bg-color);
         color: white;
@@ -62,11 +62,17 @@
         font-size: 4.5em;
         width: 230px;
         height: 87px;
-        margin-top: 11rem;
+        margin-top: 9rem;
         margin-left: 70px;
         background-color: var(--main-bg-color);
         color: white;
         border: none;
+
+    }
+
+    nav ul {
+        margin-top: 9rem;
+        margin-left: 20px;
 
     }
 
@@ -84,12 +90,6 @@
 
     }
 
-    nav ul {
-        margin-top: 11rem;
-        margin-left: 20px;
-
-    }
-
     .prevbtn, .nextbtn {
         visibility: hidden;
 
@@ -97,6 +97,7 @@
 
     .main {
         width: 100rem;
+        margin-top: 16vh;
 
     }
 
